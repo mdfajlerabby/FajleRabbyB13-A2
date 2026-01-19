@@ -61,6 +61,63 @@
      </nav>
     </header>
 
+    <!-- Banner Section-->
+    <section class="min-h-screen bg-[url('./assets/hero-bg.png')] bg-cover bg-center flex items-center justify-center px-4">
+        <div class="text-center max-w-3xl mx-auto">
+
+            <!-- Podcast Visual Wrapper -->
+            <div class="relative mx-auto mt-8 mb-10 w-64 h-64 sm:w-72 sm:h-72 lg:w-80 lg:h-80">
+
+               <!-- Circle Background Image -->
+                <div class="w-full h-full rounded-full bg-[url('./assets/hero-circle.png')] bg-cover bg-center flex items-center justify-center shadow-2xl">
+
+                    <!-- NEW Badge -->
+                    <span class="absolute top-6 right-6 bg-green-500 text-xs font-semibold px-3 py-1 rounded-full">
+                        NEW
+                    </span>
+
+                    <!-- Mic Image INSIDE Circle -->
+                    <img 
+                        src="./assets/microphone.png"
+                        alt="Podcast Mic"
+                        class="w-24 sm:w-28 lg:w-32"
+                    />
+
+                </div>
+
+            </div>
+
+            <!-- Heading -->
+            <h1 class="text-3xl sm:text-4xl lg:text-6xl font-bold leading-tight text-white">
+            TechWave
+            </h1>
+
+            <!-- Description -->
+            <p class="mt-4 text-gray-300 max-w-xl mx-auto">
+            Your daily does of tech insights, productivity hacks, and personal growth
+            </p>
+
+            <!-- CTA Buttons -->
+            <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+
+                <!-- Listen Now Button -->
+                <button class="flex items-center gap-2 px-8 py-3 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 font-semibold hover:scale-105 transition text-white">
+                    <img src="./assets/spotify.png" alt="Play" class="w-5 h-5">
+                    Listen On Spotify
+                </button>
+
+                <!-- Explore Episodes Button -->
+                <button class="flex items-center gap-2 px-12 py-3 rounded-full border border-green/50 hover:bg-white hover:text-black transition text-green-500 font-semibold">
+                    <img src="./assets/message.png" alt="Arrow" class="w-auto h-auto">
+                    Subscribe
+                </button>
+
+            </div>
+
+        </div>
+    </section>
+
+
 
 
 </body>
