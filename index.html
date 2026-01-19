@@ -9,6 +9,7 @@
     <style type="text/tailwindcss">
 
     </style>
+    <link rel="stylesheet" href="waveanimation.css">
 </head>
 <body>
     <!-- Navbar Section-->
@@ -66,13 +67,22 @@
         <div class="text-center max-w-3xl mx-auto">
 
             <!-- Podcast Visual Wrapper -->
-            <div class="relative mx-auto mt-8 mb-10 w-64 h-64 sm:w-72 sm:h-72 lg:w-80 lg:h-80">
+            <div class="relative flex items-center justify-center mt-8 mb-10">
 
-               <!-- Circle Background Image -->
-                <div class="w-full h-full rounded-full bg-[url('./assets/hero-circle.png')] bg-cover bg-center flex items-center justify-center shadow-2xl">
+                <!-- Outer Halo 3 -->
+                <div class="absolute w-72 h-72 sm:w-80 sm:h-80 rounded-full border border-gray-400 opacity-20 animate-pulse-slow"></div>
+
+                <!-- Middle Halo 2 -->
+                <div class="absolute w-64 h-64 sm:w-72 sm:h-72 rounded-full border border-gray-400 opacity-25 animate-pulse-medium"></div>
+
+                <!-- Inner Halo 1 -->
+                <div class="absolute w-56 h-56 sm:w-64 sm:h-64 rounded-full border border-gray-400 opacity-30 animate-pulse-fast"></div>
+
+                <!-- Main Podcast Circle -->
+                <div class="relative w-48 h-48 sm:w-56 sm:h-56 lg:w-64 lg:h-64 rounded-full bg-[url('./assets/hero-circle.png')] bg-cover bg-center flex items-center justify-center shadow-2xl z-10">
 
                     <!-- NEW Badge -->
-                    <span class="absolute top-6 right-6 bg-green-500 text-xs font-semibold px-3 py-1 rounded-full">
+                    <span class="absolute top-4 right-4 bg-green-500 text-xs font-semibold px-3 py-1 rounded-full text-black">
                         NEW
                     </span>
 
@@ -80,11 +90,10 @@
                     <img 
                         src="./assets/microphone.png"
                         alt="Podcast Mic"
-                        class="w-24 sm:w-28 lg:w-32"
+                        class="w-20 sm:w-24 lg:w-28 z-20"
                     />
 
                 </div>
-
             </div>
 
             <!-- Heading -->
@@ -94,20 +103,20 @@
 
             <!-- Description -->
             <p class="mt-4 text-gray-300 max-w-xl mx-auto">
-            Your daily does of tech insights, productivity hacks, and personal growth
+            Your daily dose of tech insights, productivity hacks, and personal growth
             </p>
 
             <!-- CTA Buttons -->
-            <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+            <div class="mt-8 flex flex-wrap gap-3 justify-center">
 
                 <!-- Listen Now Button -->
-                <button class="flex items-center gap-2 px-8 py-3 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 font-semibold hover:scale-105 transition text-white">
+                <button class="flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 font-semibold hover:scale-105 transition text-white">
                     <img src="./assets/spotify.png" alt="Play" class="w-5 h-5">
                     Listen On Spotify
                 </button>
 
                 <!-- Explore Episodes Button -->
-                <button class="flex items-center gap-2 px-12 py-3 rounded-full border border-green/50 hover:bg-white hover:text-black transition text-green-500 font-semibold">
+                <button class="flex items-center gap-2 px-6 py-3 rounded-full border border-green/50 hover:bg-white hover:text-black transition text-green-500 font-semibold">
                     <img src="./assets/message.png" alt="Arrow" class="w-auto h-auto">
                     Subscribe
                 </button>
@@ -410,17 +419,65 @@
                     <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full border border-gray-500/50 hover:border-purple-500 hover:bg-purple-500/10 transition">
                         <img src="./assets/youtube.png" alt="Instagram" class="w-5 h-5">
                     </a>
-
                 </div>
-
             </div>
-
             </div>
         </div>
     </section>
 
+    <!-- Footer Section -->
+    <footer class="relative pt-18 pb-8 bg-[url('./assets/footer-bg.png')] bg-cover bg-center">
+        <!-- Overlay -->
+        <div class="absolute inset-0 bg-[#0f0624]/50"></div>
 
+        <!-- Content -->
+        <div class="relative max-w-7xl mx-auto px-4 text-center">
 
+            <!-- Brand -->
+            <div class="mb-10">
+                <h3 class="text-6xl font-bold">
+                    <span class="text-white">Tech</span>
+                    <span class="bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text text-transparent">
+                    Wave
+                    </span>
+                </h3>
+            </div>
+
+            <!-- Platforms -->
+            <div class="grid grid-cols-2 gap-x-3 gap-y-2 sm:flex sm:flex-wrap sm:justify-center sm:gap-8 text-gray-300 text-sm mb-10">
+
+                <div class="flex items-center justify-center gap-2 hover:text-purple-400 transition">
+                    <img src="./assets/spotify.png" alt="Spotify" class="w-6 h-6">
+                    <span>Spotify</span>
+                </div>
+
+                <div class="flex items-center justify-center gap-2 hover:text-purple-400 transition">
+                    <img src="./assets/apple-podcast.png" alt="Apple Podcast" class="w-6 h-6">
+                    <span>Apple Podcast</span>
+                </div>
+
+                <div class="flex items-center justify-center gap-2 hover:text-purple-400 transition">
+                    <img src="./assets/youtube-podcast.png" alt="YouTube" class="w-6 h-5">
+                    <span>YouTube</span>
+                </div>
+
+                <div class="flex items-center justify-center gap-2 hover:text-purple-400 transition">
+                    <img src="./assets/twitter.png" alt="Google Podcast" class="w-6 h-5">
+                    <span>Twitter</span>
+                </div>
+
+            </div>
+
+            <!-- Divider -->
+            <div class="border-t border-gray-600/40 mb-6 mt-20"></div>
+
+            <!-- Copyright -->
+            <p class="text-gray-400 text-sm">
+            © 2026 TechWave. All rights reserved.
+            </p>
+
+        </div>
+    </footer>
 
 </body>
 </html>
