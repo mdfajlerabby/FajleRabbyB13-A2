@@ -7,10 +7,61 @@
     <link rel="stylesheet" href="tailwind.init.css">
     <title>TechWave</title>
     <style type="text/tailwindcss">
-        
+
     </style>
 </head>
 <body>
-    
+    <!-- Navbar Section-->
+    <header class="w-full bg-black">
+     <nav class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between relative">
+
+        <!-- Logo (ALL devices) -->
+        <div class="text-2xl font-bold">
+            <span class="text-white">Tech</span>
+            <span class="bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text text-transparent">
+                Wave
+            </span>
+        </div>
+
+
+        <!-- Center Menu (LARGE devices only) -->
+        <ul class="hidden lg:flex absolute left-1/2 -translate-x-1/2 gap-8 text-sm font-medium text-white">
+            <li class="hover:text-purple-400 cursor-pointer">Home</li>
+            <li class="hover:text-purple-400 cursor-pointer">Episodes</li>
+            <li class="hover:text-purple-400 cursor-pointer">Host</li>
+        </ul>
+
+        <!-- Gradient Button (LARGE devices only) -->
+        <div class="hidden lg:block">
+            <button class="px-6 py-2 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 text-sm font-semibold hover:scale-105 transition text-white">
+                Subscribe
+            </button>
+        </div>
+
+        <!-- Mobile Hamburger (SMALL + MEDIUM) -->
+        <label for="nav-toggle" class="lg:hidden text-2xl text-white cursor-pointer">
+        ☰
+        </label>
+
+        <!-- Hidden Checkbox -->
+        <input type="checkbox" id="nav-toggle" class="hidden peer" />
+
+        <!-- Mobile Menu -->
+        <div class="absolute top-full left-0 w-full z-50 bg-black hidden peer-checked:block lg:hidden">
+            <ul class="flex flex-col items-center gap-6 py-6 text-sm font-medium text-white">
+                <li>Home</li>
+                <li>Episodes</li>
+                <li>Host</li>
+                <button class="px-6 py-2 rounded-full bg-gradient-to-r from-purple-500 to-pink-500">
+                Subscribe
+                </button>
+            </ul>
+        </div>
+
+     </nav>
+    </header>
+
+
+
 </body>
 </html>
